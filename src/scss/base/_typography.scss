@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+.vp {
+  &__time {
+    color: $color-white;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  &__speed {
+    background: $color-black;
+    color: $color-white;
+    border: 1px solid $color-border;
+  }
+}

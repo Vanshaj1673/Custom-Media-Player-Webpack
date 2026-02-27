@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as *;
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .vp {
+    &__controls {
+      padding: 12px;
+      gap: 15px;
+    }
+
+    &__btn svg,
+    &__icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__time {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .vp {
+    &__controls {
+      padding: 8px 12px;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__progress {
+      order: -1;
+      flex: 0 0 100%;
+      margin-bottom: 8px;
+      height: 6px;
+
+      &:hover {
+        height: 8px;
+      }
+
+      &::-webkit-slider-thumb {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    &__btn {
+      padding: 10px; 
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__volume-wrapper {
+      width: 40px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      background: $color-border;
+      border-radius: 20px;
+
+      &:hover,
+      &:active {
+        width: 130px;
+        background: $color-border;
+      }
+
+      .vp__volume {
+        display: block;
+        width: 70px;
+      }
+    }
+
+    &__time {
+      font-size: 12px;
+      min-width: 80px;
+      order: 1;
+    }
+
+    &__speed {
+      padding: 2px 5px;
+      font-size: 12px;
+    }
+
+    &__overlay {
+      width: 60px;
+      height: 60px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 399px) {
+  .vp {
+    &__controls {
+      gap: 2px;
+    }
+
+    &__time {
+      display: none;
+    }
+  }
+}
